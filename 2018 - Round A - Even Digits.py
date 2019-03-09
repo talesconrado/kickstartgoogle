@@ -1,8 +1,4 @@
-testes = int(input())
-dataset = []
-for i in range(testes):
-    dataset.append(input())
-
+"""NÃO ESTÁ FUNCIONANDO"""
 
 def bonito(numero):
     """Avalia se o número é "bonito", ou seja, tem apenas caracteres pares"""
@@ -65,6 +61,11 @@ def mais_proximo(numero):
     else:
         return embelezar_up(numero)      
 
+    
+testes = int(input())
+dataset = []
+for i in range(testes):
+    dataset.append(input())
 
 for i in range(len(dataset)):
     num = mais_proximo(dataset[i])
