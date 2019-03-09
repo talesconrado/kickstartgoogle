@@ -1,7 +1,6 @@
 """NÃO ESTÁ FUNCIONANDO"""
 
 def bonito(numero):
-    """Avalia se o número é "bonito", ou seja, tem apenas caracteres pares"""
     numero = str(numero)
     for i in range(len(numero)):
         if int(numero[i]) % 2 == 0:
@@ -11,7 +10,6 @@ def bonito(numero):
     return True
 
 def onde_esta_feio(numero):
-    """Testa os números até achar um "feio", ao achar, guarda sua posição, se não acha nenhum, retorna -1"""
     numero = str(numero)
     for i in range(len(numero)):
         if bonito(numero[i]):
@@ -23,8 +21,6 @@ def onde_esta_feio(numero):
 
 
 def embelezar_up(numero):
-    """Deixa o número com a configuração "bonita" mais próxima para cima, aumentando o primeiro ímpar 
-    e colocando zeros no resto"""
     if onde_esta_feio(numero) == -1:
         return 0
     else:
@@ -40,8 +36,6 @@ def embelezar_up(numero):
         return distancia
 
 def embelezar_down(numero):
-    """Deixa o número com a configuração "bonita" mais próxima para baixo, diminuindo o primeiro ímpar 
-    e colocando oitos no resto"""
     if onde_esta_feio(numero) == -1:
         return 0
     else:
@@ -55,7 +49,6 @@ def embelezar_down(numero):
         return distancia
 
 def mais_proximo(numero):
-    """Simplesmente compara e pega o menor entre os "embelezamentos""""
     if embelezar_up(numero) > embelezar_down(numero):
         return embelezar_down(numero)
     else:
